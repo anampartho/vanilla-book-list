@@ -48,6 +48,8 @@ function formSubmitHandler(e) {
   let bookSummary = formData.get("summary");
 
   addBook(bookName, bookAuthor, bookIsbn, bookSummary);
+
+  form.reset();
 }
 
 // Add book
