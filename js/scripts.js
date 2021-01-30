@@ -35,8 +35,13 @@ function addBook(name, author, isbn = undefined, summary = undefined) {
   let book = new Book(name, author, isbn, summary);
   books.push(book);
 
+  updateLocalStorage();
   showBooks();
-  // updateLocalStorage();
+}
+
+// Update Local Storage
+function updateLocalStorage() {
+  localStorage.setItem("books", JSON.stringify(books));
 }
 
 // Show Books
