@@ -14,6 +14,22 @@ class Book {
 // Books Div
 let booksDiv = document.querySelector("#books");
 
+// Form
+let form = document.getElementById("add-book");
+form.addEventListener("submit", formSubmitHandler);
+
+// Form Submit Handler
+function formSubmitHandler(e) {
+  e.preventDefault();
+  let formData = new FormData(e.target);
+  let bookName = formData.get("title");
+  let bookAuthor = formData.get("author");
+  let bookIsbn = formData.get("isbn");
+  let bookSummary = formData.get("summary");
+
+  addBook(bookName, bookAuthor, bookIsbn, bookSummary);
+}
+
 // Add book
 function addBook(name, author, isbn = undefined, summary = undefined) {
   let book = new Book(name, author, isbn, summary);
