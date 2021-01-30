@@ -8,6 +8,7 @@ class Book {
     this.author = author;
     this.isbn = isbn;
     this.summary = summary;
+    this.id = Date.now();
   }
 }
 
@@ -17,6 +18,25 @@ let booksDiv = document.querySelector("#books");
 // Form
 let form = document.getElementById("add-book");
 form.addEventListener("submit", formSubmitHandler);
+
+// Delete Button EventListener
+document.addEventListener(
+  "click",
+  function (e) {
+    for (
+      var target = e.target;
+      target && target != this;
+      target = target.parentNode
+    ) {
+      // loop parent nodes from the target to the delegation node
+      if (target.matches(".delete-book")) {
+        removeBook.call(target, e);
+        break;
+      }
+    }
+  },
+  false
+);
 
 // Form Submit Handler
 function formSubmitHandler(e) {
@@ -66,7 +86,9 @@ function showBooks() {
                 ? `<p>ISBN: <span class="isbn">${book.isbn}</span></p>`
                 : ""
             }
-            <button class="button delete-book" title="Delete this book?"><span class="icon"><i class="fas fa-trash"></i></span></button>
+            <button class="button delete-book" title="Delete this book?" data-bookid="${
+              book.id
+            }"><span class="icon"><i class="fas fa-trash"></i></span></button>
           </div>
         </div>
       </div>
@@ -75,6 +97,19 @@ function showBooks() {
   }
 
   booksDiv.innerHTML = output;
+}
+
+// Remove Book
+function removeBook(e) {
+  let bookId = Number(this.dataset.bookid);
+
+  for (let i = books.length - 1; i >= 0; i--) {
+    if (books[i].id === bookId) {
+      books.splice(i, 1);
+    }
+  }
+  updateLocalStorage();
+  showBooks();
 }
 
 // Init Function
