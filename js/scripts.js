@@ -1,44 +1,5 @@
 // Books Array
-let books = [
-  {
-    name: "The Godfather",
-    author: "Mario Pujo",
-    isbn: 9780330024570,
-    id: 1611995696990,
-    summary:
-      "As Michael Corleone ages, he finds that being the head of the Corleone crime family isn't getting any easier. He wants his family out of the Mafia.",
-  },
-  {
-    name: "রবীন্দ্রনাথ এখানে কখনও খেতে আসেননি",
-    author: "মোহাম্মদ নাজিম উদ্দিন",
-    isbn: 9789848729755,
-    id: 1611995800557,
-    summary:
-      "মফশ্বল শহর সুন্দরপুর ছবির মতোই সুন্দর। প্রকৃতির শোভা ছাড়া উল্লেখযোগ্য কিছু নেই বললেই চলে কিন্তু সবাই জানে রবীন্দ্র এখানে কখনও খেতে আসেন নি! কেন আসেন নি তারচেয়েও বড় কথা কেন অনেকেই সেখানে ছুটে আসে! এক আগন্তুক এসে হাজির হলো সেই সুন্দরপুরে।",
-  },
-  {
-    name: "The Da Vinci Code",
-    author: "Dan Brown",
-    isbn: 385504209,
-    id: 1611995910256,
-    summary:
-      "A murder in Paris' Louvre Museum and cryptic clues in some of Leonardo da Vinci's most famous paintings lead to the discovery of a religious mystery. For 2,000 years a secret society closely guards information that -- should it come to light -- could rock the very foundations of Christianity.",
-  },
-  {
-    name: "ইছামতি",
-    author: "বিভূতিভূষণ বন্দ্যোপাধ্যায়",
-    isbn: 9848261400,
-    id: 1611996387586,
-  },
-  {
-    name: "The Da Vinci Code",
-    author: "Dan Brown",
-    isbn: 385504209,
-    id: 1611995910256,
-    summary:
-      "A murder in Paris' Louvre Museum and cryptic clues in some of Leonardo da Vinci's most famous paintings lead to the discovery of a religious mystery. For 2,000 years a secret society closely guards information that -- should it come to light -- could rock the very foundations of Christianity.",
-  },
-];
+let books = [];
 
 // Books Div
 let booksDiv = document.querySelector("#books");
