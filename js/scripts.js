@@ -14,6 +14,15 @@ class Book {
 // Books Div
 let booksDiv = document.querySelector("#books");
 
+// Add book
+function addBook(name, author, isbn = undefined, summary = undefined) {
+  let book = new Book(name, author, isbn, summary);
+  books.push(book);
+
+  showBooks();
+  // updateLocalStorage();
+}
+
 // Show Books
 function showBooks() {
   let output = "";
@@ -31,7 +40,11 @@ function showBooks() {
 
           <div class="content">
             ${book.summary ? `<p>${book.summary}</p>` : ""}
-            <p>ISBN: <span class="isbn">${book.isbn}</span></p>
+            ${
+              book.isbn
+                ? `<p>ISBN: <span class="isbn">${book.isbn}</span></p>`
+                : ""
+            }
             <button class="button delete-book" title="Delete this book?"><span class="icon"><i class="fas fa-trash"></i></span></button>
           </div>
         </div>
