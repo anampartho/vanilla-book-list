@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book List</title>
+    <script
+      src="https://kit.fontawesome.com/16626965f7.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
@@ -11,6 +15,69 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h1 class="is-size-1"><strong>Add New Books</strong></h1>
+        <form action="" id="add-book">
+          <div class="field">
+            <label class="label">Book Name</label>
+            <div class="control has-icons-left">
+              <input
+                class="input"
+                type="text"
+                placeholder="Book Name"
+                id="bookName"
+                required
+              />
+              <span class="icon is-small is-left">
+                <i class="fas fa-book"></i>
+              </span>
+              <p class="help is-danger is-hidden">This field is required</p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Writer</label>
+            <div class="control has-icons-left">
+              <input
+                class="input"
+                type="text"
+                placeholder="Writers Name"
+                id="writer"
+                required
+              />
+              <span class="icon is-small is-left">
+                <i class="fas fa-pen"></i>
+              </span>
+            </div>
+            <p class="help is-danger is-hidden">This field is required</p>
+          </div>
+
+          <div class="field">
+            <label class="label">Books Summary</label>
+            <div class="control">
+              <textarea
+                class="textarea"
+                placeholder="Books Summary"
+                id="summary"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <input type="submit" class="button is-success" value="Add Book" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="is-size-2"><strong>Your Books</strong></h2>
+        <div class="columns books-columns" id="books"></div>
+      </div>
+    </section>
     <script src="js/scripts.js"></script>
   </body>
 </html>
