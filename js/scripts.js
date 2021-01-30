@@ -61,7 +61,7 @@ function showBooks() {
           <div class="content">
             ${book.summary ? `<p>${book.summary}</p>` : ""}
             <p>ISBN: <span class="isbn">${book.isbn}</span></p>
-            <button class="button is-danger delete-book"><span class="icon"><i class="fas fa-trash"></i></span></button>
+            <button class="button delete-book" title="Delete this book?"><span class="icon"><i class="fas fa-trash"></i></span></button>
           </div>
         </div>
       </div>
