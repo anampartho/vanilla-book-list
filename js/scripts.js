@@ -1,6 +1,16 @@
 // Books Array
 let books = [];
 
+// Books Class
+class Book {
+  constructor(name, author, isbn, summary) {
+    this.name = name;
+    this.author = author;
+    this.isbn = isbn;
+    this.summary = summary;
+  }
+}
+
 // Books Div
 let booksDiv = document.querySelector("#books");
 
