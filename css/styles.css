@@ -1,3 +1,19 @@
 .card {
   width: 100%;
 }
+
+/* Delete Book icon */
+.delete-book {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  opacity: 0.3;
+  transition: all 0.35s ease-in-out;
+}
+
+.delete-book:hover {
+  opacity: 1;
+  background-color: #f14668;
+  color: #ffffff;
+}
